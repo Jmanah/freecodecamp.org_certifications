@@ -11,6 +11,9 @@ def calculate_demographic_data(print_data=True):
     average_age_men = round(
         df.age[df.sex == 'Male'].mean(),1
     )
+    print(df.sex == 'Male')
+    print(df.age[df.sex == 'Male'])
+    # print(df[df.age[df.sex == 'Male']])
     
     ## What is the percentage of people who have a Bachelor's degree?
     # constructs a dictionary of each type of education listed and ists number of occurances
@@ -71,30 +74,30 @@ def calculate_demographic_data(print_data=True):
     
     top_IN_occupation = X.occupation.value_counts().idxmax()
     
-    print("Number of each race:\n", race_count) 
-    print("Average age of men:", average_age_men)
-    print(f"Percentage with Bachelors degrees: {percentage_bachelors}%")
-    print(f"Percentage with higher education that earn >50K: {higher_education_rich}%")
-    print(f"Percentage without higher education that earn >50K: {lower_education_rich}%")
-    print(f"Min work time: {min_work_hours} hours/week")
-    print(f"Percentage of rich among those who work fewest hours: {rich_percentage}%")
-    print("Country with highest percentage of rich:", highest_earning_country)
-    print(f"Highest percentage of rich people in country: {highest_earning_country_percentage}%")
-    print("Top occupations in India:", top_IN_occupation)
+    # print("Number of each race:\n", race_count) 
+    # print("Average age of men:", average_age_men)
+    # print(f"Percentage with Bachelors degrees: {percentage_bachelors}%")
+    # print(f"Percentage with higher education that earn >50K: {higher_education_rich}%")
+    # print(f"Percentage without higher education that earn >50K: {lower_education_rich}%")
+    # print(f"Min work time: {min_work_hours} hours/week")
+    # print(f"Percentage of rich among those who work fewest hours: {rich_percentage}%")
+    # print("Country with highest percentage of rich:", highest_earning_country)
+    # print(f"Highest percentage of rich people in country: {highest_earning_country_percentage}%")
+    # print("Top occupations in India:", top_IN_occupation)
     
-    return {
-        'race_count': race_count,
-        'average_age_men': average_age_men,
-        'percentage_bachelors': percentage_bachelors,
-        'higher_education_rich': higher_education_rich,
-        'lower_education_rich': lower_education_rich,
-        'min_work_hours': min_work_hours,
-        'rich_percentage': rich_percentage,
-        'highest_earning_country': highest_earning_country,
-        'highest_earning_country_percentage':
-        highest_earning_country_percentage,
-        'top_IN_occupation': top_IN_occupation
-    }
+    # return {
+    #     'race_count': race_count,
+    #     'average_age_men': average_age_men,
+    #     'percentage_bachelors': percentage_bachelors,
+    #     'higher_education_rich': higher_education_rich,
+    #     'lower_education_rich': lower_education_rich,
+    #     'min_work_hours': min_work_hours,
+    #     'rich_percentage': rich_percentage,
+    #     'highest_earning_country': highest_earning_country,
+    #     'highest_earning_country_percentage':
+    #     highest_earning_country_percentage,
+    #     'top_IN_occupation': top_IN_occupation
+    # }
 
 
-
+calculate_demographic_data()
