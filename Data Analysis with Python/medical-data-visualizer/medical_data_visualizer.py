@@ -42,8 +42,6 @@ def draw_heat_map():
     # Generate a mask for the upper triangle
     mask = None
 
-
-
     # Set up the matplotlib figure
     fig, ax = None
 
